@@ -65,9 +65,3 @@ History
 [Dan Cross]: http://pub.gajendra.net/about
 [Plan 9 from Bell Labs]: https://web.archive.org/web/20170601064029/http://plan9.bell-labs.com/plan9/index.html
 [original source]: https://web.archive.org/web/http://plan9.bell-labs.com/sources/contrib/cross/
-
-
-Disclaimer
-----------
-
-This is not an official Google product.
