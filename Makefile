@@ -13,9 +13,19 @@
 # limitations under the License.
 
 CFLAGS = -Wall -O2
+prefix ?= /usr/local
+bindir ?= $(prefix)/bin
+mandir ?= $(prefix)/share/man
 
 .DEFAULT_GOAL := walk
 
 .PHONY: clean
 clean:
 	$(RM) walk
+
+.PHONY: install
+install: sor sor.1 walk walk.1
+	mkdir -p "$(bindir)" "$(mandir)/man1"
+	install -c sor walk "$(bindir)"
+	gzip -9 <sor.1 >"$(mandir)/man1/sor.1.gz"
+	gzip -9 <walk.1 >"$(mandir)/man1/walk.1.gz"
